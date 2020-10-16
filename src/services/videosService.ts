@@ -18,7 +18,7 @@ export const processVideos = (videosFetched: VideosFetchedType): VideoType[] =>
   });
 
 export const runFetchVideos = (query: string) =>
-  apiService.request('get', {
+  apiService.request({
     url: fetchVideosUrl(query),
     processData: processVideos,
   });
